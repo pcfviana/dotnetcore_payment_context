@@ -1,10 +1,11 @@
 using System;
 using PaymentContext.Domain.Enums;
 using PaymentContext.Domain.ValueObjecs;
+using PaymentContext.Shared.Entities;
 
 namespace PaymentContext.Domain.Entities 
 {
-    public abstract class Payment
+    public abstract class Payment : Entity
     {
         protected Payment(DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, string payer, EDocumentType document, Address address, Email email)
         {
